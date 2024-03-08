@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width-=device-width, initial-scale=1.0">
+        <title>PORTFOLIO</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <nav class="navbar">
+            <h1 class="logo">detikhealth</h1>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#tentang">Tentang Acara</a></li>
+                <li><a href="#galeri">Galeri</a></li>
+                <li><a href="#berita">Berita</a></li>
+                <li><a href="#">Registrasi</a></li>
+            </ul>
+            <img src="img/menu.png" alt="" class="menu-btn">
+        </nav>
+
+        <!-- Home -->
+        <section id="home" class="home">
+            <div class="home-left">
+                <div class="home-left-up">
+                    <h1>SUDIRMAN</h1>
+                </div>
+                <div class="home-left-down">
+                    <h1>RUN 2023</h1>
+                </div>
+                <h4>Presented by:</h4>
+                <a href="#tentang" class="ctn">TENTANG ACARA</a>
+            </div>
+
+            <div class="home-right">
+                <img src="img/awal.png">
+            </div>
+        </section>
+
+        <!-- Tentang Acara -->
+        <section id="tentang" class="tentang">
+            <div class="row">
+                <div class="funrun">
+                    <h2>10K FUN RUN</h2>
+                    <p>penjelasannya apa aja gesss</p>
+                </div>
+            <div class="side-content">
+                <div class="gratis">
+                    <h2>GRATIS DAN BERHADIAH</h2>
+                    <p>INI JUAGDANM DAVDHAHDAKA</p>
+                </div>
+                <div class="tenant">
+                    <h2>50+ TENANT BAZZAR</h2>
+                    <p>INI JUAGDANM DAVDHAHDAKA</p>
+                </div>
+                <div class="special">
+                    <h2>SPECIAL PERFORMANCE</h2>
+                    <p>INI JUAGDANM DAVDHAHDAKA</p>
+                </div>
+            </div>
+            </div>
+            <a href="#" class="btn">DAFTAR SEKARANG</a>
+        </section>
+
+        <!-- Didukung Oleh -->
+        <div class="didukung">
+
+        </div>
+
+        <!-- Galeri Sudirman Run 2022 -->
+        <section id="galeri" class="galeri">
+            <div class="foto">
+                <h1>GALERI SUDIRMAN RUN 2022</h1>
+                <di class="gambar">
+                    <img src="img/lari1.jpeg">
+                </di>
+                <di class="gambar">
+                    <img src="img/lari2.jpeg">
+                </di>
+                <di class="gambar">
+                    <img src="img/lari3.jpeg">
+                </di>
+                <di class="gambar">
+                    <img src="img/lari4.jpeg">
+                </di>
+            </div>
+        </section>
+
+        <!-- Artikel Terkait -->
+
+        <!-- Akhir -->
+
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const menuBtn = document.querySelector('.menu-btn');
+                const navlinks = document.querySelector('.nav-links');
+
+                menuBtn.addEventListener('click', () => {
+                    navlinks.classList.toggle('mobile-menu');
+                });
+
+                document.querySelectorAll('.nav-links a').forEach(anchor => {
+                    anchor.addEventListener('click', function(e) {
+                        e.preventDefault();
+
+                        const targetId = this.getAttribute('href').substring(1);
+                        const targetElement = document.getElementById(targetId);
+
+                        window.scrollTo({
+                            top: targetElement.offsetTop - document.querySelector('.navbar').offsetHeight,
+                            behavior: 'smooth'
+                        });
+                    });
+                });
+            });
+        </script>
+
+
+
+    </body>
+
+
+</html>>
